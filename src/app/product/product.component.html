@@ -1,0 +1,78 @@
+<!-- 
+<h3>Product List</h3>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Photo</th>
+        <th>Buy</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+                <img src="../../assets/images/{{product.photo}}" width="50">
+    
+        </td>
+        <td>
+            <a [routerLink]="['/cart', { id:product.id }]">Buy Now</a>
+        </td>
+    </tr>
+</table> -->
+<br>
+<br>
+<br>
+<div class="container" style="font-family: 'Poppins', sans-serif; " >  
+
+        <div class="row" style="font-family: 'Poppins', sans-serif; ">
+    
+         
+          <!-- /.col-lg-3 -->
+    
+          <div class="col-md-6" *ngFor="let product of products" style="font-family: 'Poppins', sans-serif; ">
+    
+            <div class="card mt-4">
+              <img class="card-img-top" src="../../assets/images/{{product.photo}}" >
+              <div class="card-body">
+                <h3 class="card-title">{{product.name}}</h3>
+                <h4>R{{product.price}}</h4>
+                <p>
+                    <a class="btn btn-warning" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Brief Description</a>
+                    <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Video Snippet</button>
+                   </p>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                         {{product.brief}}</div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            <iframe width="420" height="315"
+                            src="https://www.youtube.com/embed/sjuLnB-Nfco">
+                            </iframe>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <p class="card-text">{{ product.desc}}</p>
+                <hr>
+ 
+                <a [routerLink]="['/cart', { id:product.id }]"class="btn btn-outline-info col-md-12">Add To Cart</a>
+            </div>
+            </div>
+    
+          </div>
+
+          
+          <!-- /.col-lg-9 -->
+    
+        </div>
+    
+      </div>
+      <!-- /.container -->

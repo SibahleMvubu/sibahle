@@ -1,0 +1,139 @@
+<!-- <h3>Cart Info</h3> -->
+<!-- <table border="1"> -->
+    <!-- <tr> -->
+        <!-- <th>Option</th> -->
+        <!-- <th>Id</th> -->
+        <!-- <th>Name</th> -->
+        <!-- <th>Photo</th> -->
+        <!-- <th>Price</th> -->
+        <!-- <th>Quantity</th> -->
+        <!-- <th>Sub Total</th> -->
+    <!-- </tr> -->
+    <!-- <tr *ngFor="let item of items"> -->
+        <!-- <td align="center"> -->
+            <!-- <a (click)="remove(item.product.id)">X</a> -->
+        <!-- </td> -->
+        <!-- <td>{{item.product.id}}</td> -->
+        <!-- <td>{{item.product.name}}</td> -->
+        <!-- <td> -->
+            <!-- <img src="assets/http://learningprogramming.net/wp-content/uploads/mean_stack/angular/{{item.product.photo}}" width="50"> -->
+        <!-- </td> -->
+        <!-- <td>{{item.product.price}}</td> -->
+        <!-- <td>{{item.quantity}}</td> -->
+        <!-- <td>{{item.product.price * item.quantity}}</td> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+        <!-- <td colspan="6" align="right">Total</td> -->
+        <!-- <td>{{total}}</td> -->
+    <!-- </tr> -->
+<!-- </table> -->
+<!--  -->
+
+
+<br>
+<br>
+<br>
+<section id="services" class="bg-light">
+        <div class="container mb-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> </th>
+                                        <th scope="col">Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Action</th>
+                                        <th>Sub Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of items">
+                                        <td><img src="../../assets/images/{{item.product.photo}}" width="60" /> </td>
+                                        <td>{{item.product.name}}</td>
+                                        <td>R{{item.product.price}}</td>
+                                        <td>{{item.quantity}}</td>
+                                         <td > <a (click)="remove(item.product.id)" class="btn btn-danger">Remove</a></td>
+                                         <td>R{{item.product.price * item.quantity}}</td>
+                                        </tr>
+                                 
+                                  
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><strong>Total</strong></td>
+                                        <td><strong><td>R{{total}}</td></strong></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col mb-2">
+                        <div class="row">
+                            <div class="col-md-12">
+
+
+                            </div>
+                            
+                            <div class="col-sm-12  col-md-6">
+                                <!-- <button  [routerLink]="['/home/#services']" class="btn btn-block btn-light">Continue Shopping</button>
+                                 -->Payment Method: 
+                               <p>
+                                        <a class="btn btn-warning" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Cash On Delivery</a>
+                                        <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">EFT</button>
+                                          </p>
+                                      <div class="row">
+                                        <div class="col">
+                                          <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                            <div class="card card-body">
+                                                    <form>
+                                                            <div class="form-group row">
+                                                              <label for="inputPassword" class="col-sm-12 col-form-label">Please enter your address</label>
+                                                              <div class="col-sm-12">
+                                                                <input type="password" class="form-control" id="inputPassword" placeholder="address">
+                                                              </div>
+                                                            </div>
+                                                          </form>
+                                             
+                                                <div data-alerts="alerts"  data-ids="myid" data-fade="3000"></div>
+                                                <a [routerLink]="['/home']"><button class="btn btn-info mt-3 px-4 text-white">Checkout</button></a>
+                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col">
+                                          <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                            <div class="card card-body">
+                                                    <form>
+                                                            
+                                                            <div class="form-group row">
+                                                              <label for="inputPassword" class="col-sm-12 col-form-label">Please enter your banking details</label>
+                                                              <div class="col-sm-12">
+                                                                <input type="password" class="form-control" id="inputPassword" placeholder="Banking Details">
+                                                              </div>
+                                                            </div>
+                                                          </form>
+                                                          <a [routerLink]="['/home']"><button class="btn btn-info mt-3 px-4 text-white">Checkout</button></a>
+                                        
+                                                        
+                          
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                            </div>
+                            
+                            
+             
+     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+ </section>
